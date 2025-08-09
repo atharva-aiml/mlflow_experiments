@@ -27,8 +27,8 @@ dagshub.init(repo_owner='atharva.ai1509',
 
 import mlflow
 with mlflow.start_run():
-  mlflow.log_param('parameter name', 'value')
-  mlflow.log_metric('metric name', 1)
+    mlflow.log_param("l1_ratio", l1_ratio)
+    mlflow.log_metric("rmse", rmse)
 
 
 def eval_metrics(actual, pred):
