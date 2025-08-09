@@ -1,7 +1,5 @@
-import dagshub
-dagshub.init(repo_owner='atharva.ai1509', repo_name='mlflow_experiments', mlflow=True)
-
-import mlflow
-with mlflow.start_run():
-  mlflow.log_param('parameter name', 'value')
-  mlflow.log_metric('metric name', 1)
+import os
+MLFLOW_TRACKING_URI = https://dagshub.com/atharva.ai1509/mlflow_experiments.mlflow
+MLFLOW_TRACKING_USERNAME = atharva.ai1509
+MLFLOW_TRACKING_PASSWORD = f5905446969631180d3de329669c7a710d5bea1b
+python script.py

@@ -20,16 +20,6 @@ import logging
 logging.basicConfig(level=logging.WARN)
 logger = logging.getLogger(__name__)
 
-import dagshub
-dagshub.init(repo_owner='atharva.ai1509',
-             repo_name='mlflow_experiments',
-             mlflow=True)
-
-import mlflow
-with mlflow.start_run():
-    mlflow.log_param("l1_ratio", l1_ratio)
-    mlflow.log_metric("rmse", rmse)
-
 
 def eval_metrics(actual, pred):
     rmse = np.sqrt(mean_squared_error(actual, pred))
